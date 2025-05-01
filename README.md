@@ -19,10 +19,10 @@ An interactive and delightful toy store website where parents and gift-givers ca
 
 
 ### 🧸 Home Page
-![Home Screenshot](photo1.png)
+![vite-project](photo1.png)
 
 ### 🧸 Categories View
-![Categories Screenshot](photo2.png)
+![vite-project](photo2.png)
 
 ### 🧸 Product Details
 ![Product Screenshot](screenshots/product.png)
