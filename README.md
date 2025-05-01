@@ -22,13 +22,13 @@ An interactive and delightful toy store website where parents and gift-givers ca
 ![Homescreen](vite-project/photo1.png)
 
 ### 🧸 Categories View
-![categoriesScreen]vite-project/photo2.png)
+![categoriesScreen](vite-project/photo2.png)
 
 ### 🧸 Product Details
-![Product Screenshot](screenshots/product.png)
+![Product Screenshot](vite-project/photo3.png)
 
 ### 🧸 Sale Page
-![Sale Screenshot](screenshots/sale.png)
+![Sale Screenshot](vite-project/photo4.png)
 
 ---
 
