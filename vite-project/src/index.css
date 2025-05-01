@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-quicksand;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bubblegum;
+  }
+}
+
+@layer components {
+  .toy-button {
+    @apply px-6 py-3 rounded-full text-white font-bubblegum text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+
+  .category-card {
+    @apply rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer;
+  }
+
+  .toy-card {
+    @apply rounded-2xl bg-white p-4 shadow-md transition-all duration-300 hover:shadow-xl;
+  }
+
+  .cloud-pattern {
+    background-color: #f0f9ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cpath fill='%23a9d0f5' fill-opacity='0.4' d='M56 26c-2.813 0-5.456.726-7.752 2H56v-2zm-26 2h4.087C38.707 20.783 46.795 16 56 16v-2c-.672 0-1.339.024-1.999.07L54 14a2 2 0 0 1 2-2v-2a4 4 0 0 0-3.98 3.602 28.087 28.087 0 0 0-2.793-3.862A7.994 7.994 0 0 1 56 6V4a9.988 9.988 0 0 0-8.17 4.232 28.156 28.156 0 0 0-3.03-2.634A13.979 13.979 0 0 1 56 0h-7.752a16.078 16.078 0 0 0-5.09 4.454 27.941 27.941 0 0 0-3.536-1.936c.63-.896 1.33-1.738 2.095-2.518H39.93c-.762.775-1.465 1.594-2.095 2.476a27.997 27.997 0 0 0-3.535 1.894 16.087 16.087 0 0 0-5.09-4.43H21.19c.742.742 1.423 1.538 2.039 2.376a28.142 28.142 0 0 0-3.744 2.241 14.041 14.041 0 0 1 10.62-4.847H22.83c-2.337.375-4.538 1.26-6.492 2.544a28.209 28.209 0 0 0-3.49-1.422A10.128 10.128 0 0 1 20.899 0H0v2a8 8 0 0 1 6.136 2.871L6 5a6 6 0 0 0-6 6h2a4 4 0 0 1 3.828-3.995c.39.033.789.072 1.177.118a27.826 27.826 0 0 0-3.214 3.713 5.99 5.99 0 0 1-2.792-5.035h2a4 4 0 0 0 1.604 3.193 28.35 28.35 0 0 0-1.06 3.425A6 6 0 0 1 0 14v2a8.01 8.01 0 0 0 2.623-5.909c.401.885.84 1.75 1.313 2.595A8.983 8.983 0 0 0 0 16c0 4.401 3.147 8.075 7.328 8.896.401.077.814.144 1.235.199A29.059 29.059 0 0 0 10.049 28H0v-2a7.987 7.987 0 0 0 4.323-1.264A8.057 8.057 0 0 0 0 18v2a6 6 0 0 1 3.68 1.272 27.972 27.972 0 0 0 3.924 5.144A3.999 3.999 0 0 1 6 24c0 .374.064.736.178 1.073a28.063 28.063 0 0 0 3.131 2.83 6 6 0 0 1-3.309.095 28.17 28.17 0 0 0 4.3.142c.5-.018.997-.048 1.487-.09A8.118 8.118 0 0 0 7.999 28h8.307a29.054 29.054 0 0 0 1.487-.099 8.025 8.025 0 0 0-4.87-1.9c.322-.02.647-.031.974-.031h4.982a29.046 29.046 0 0 0 3.344.074l-3.062-2a8.078 8.078 0 0 0 2.037-1 30.638 30.638 0 0 1 4.78 2.104 8.07 8.07 0 0 0 3.156-.926 29.166 29.166 0 0 0 1.888.144L30 26a8.104 8.104 0 0 0 4.1.198 28.54 28.54 0 0 0 1.9-.198v2z'/%3E%3C/svg%3E");
+  }
+}
+
+/* Fun confetti background pattern */
+.confetti-pattern {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff6b6b' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
